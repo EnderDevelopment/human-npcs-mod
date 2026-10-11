@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "humannpcsmod",
+  "version": "1.0.0",
+  "name": "Human NPCs Mod",
+  "description": "A mod that adds human-like AI player NPCs to Minecraft Bedrock.",
+  "authors": ["Mark Christian Nuhayge Solgon"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.markchristiannuhaygesolgon.humannpcsmod.HumanNPCsMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.21.4",
+    "java": ">=17"
+  }
+}

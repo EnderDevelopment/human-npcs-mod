@@ -1,0 +1,37 @@
+plugins {
+    id 'fabric-loom' version '1.7-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.4'
+    mappings 'net.fabricmc:yarn:1.21.4+build.1:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.14.0'
+
+    // Common dependencies
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.91.0+1.21.4'
+
+    // Additional dependencies for NPC functionality
+    modImplementation 'com.google.code.gson:gson:2.10.1'
+    modImplementation 'org.apache.commons:commons-lang3:3.12.0'
+}
+
+loom {
+    minecraftVersion = "1.21.4"
+    run {
+        version = "release"
+        propertyMap {
+            "fabric-api.global_property" = "true"
+        }
+    }
+}
